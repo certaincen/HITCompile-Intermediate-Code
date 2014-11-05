@@ -1,0 +1,116 @@
+function->int ['type', 'IDENTIFIER', '(', 'params', ')', 'funcbody']
+function->char ['type', 'IDENTIFIER', '(', 'params', ')', 'funcbody']
+function->float ['type', 'IDENTIFIER', '(', 'params', ')', 'funcbody']
+function->$ synch
+function->double ['type', 'IDENTIFIER', '(', 'params', ')', 'funcbody']
+functions->int ['function', 'functions']
+functions->double ['function', 'functions']
+functions->char ['function', 'functions']
+functions->float ['function', 'functions']
+functions->$ ['@']
+Vars->; ['@', 'act_pop']
+Vars->, [',', 'IDENTIFIER', 'act_1', 'act_pop', 'Vars']
+funcbody->$ synch
+funcbody->int synch
+funcbody->double synch
+funcbody->float synch
+funcbody->char synch
+funcbody->; [';']
+funcbody->{ ['{', 'procedures', '}']
+assignment->int synch
+assignment->double synch
+assignment->float synch
+assignment->char synch
+assignment->while synch
+assignment->IDENTIFIER ['IDENTIFIER', '=', 'expression', 'act_2', ';']
+assignment->} synch
+assignment->if synch
+expression'-><= ['@', 'act_4']
+expression'->>= ['@', 'act_4']
+expression'->) ['@', 'act_4']
+expression'->+ ['+', 'expression', 'act_3']
+expression'->* ['*', 'expression', 'act_3']
+expression'->- ['-', 'expression', 'act_3']
+expression'->/ ['/', 'expression', 'act_3']
+expression'->== ['@', 'act_4']
+expression'->; ['@', 'act_4']
+expression'->!= ['@', 'act_4']
+expression'->< ['@', 'act_4']
+expression'->> ['@', 'act_4']
+proelse->int ['@', 'act_pop', 'act_catch_label_f']
+proelse->double ['@', 'act_pop', 'act_catch_label_f']
+proelse->float ['@', 'act_pop', 'act_catch_label_f']
+proelse->else ['else', '{', 'act_pop', 'act_catch_label_f', 'procedure', '}']
+proelse->char ['@', 'act_pop', 'act_catch_label_f']
+proelse->while ['@', 'act_pop', 'act_catch_label_f']
+proelse->IDENTIFIER ['@', 'act_pop', 'act_catch_label_f']
+proelse->} ['@', 'act_pop', 'act_catch_label_f']
+proelse->if ['@', 'act_pop', 'act_catch_label_f']
+program->int ['function', 'functions']
+program->double ['function', 'functions']
+program->char ['function', 'functions']
+program->float ['function', 'functions']
+program->$ synch
+params->) ['@']
+params->int ['type', 'IDENTIFIER', "params'"]
+params->char ['type', 'IDENTIFIER', "params'"]
+params->float ['type', 'IDENTIFIER', "params'"]
+params->double ['type', 'IDENTIFIER', "params'"]
+expression->>= synch
+expression->) synch
+expression->( ['(', 'expression', ')', 'act_6']
+expression-><= synch
+expression->- ['-', 'expression', 'act_5']
+expression->number ['number', "expression'"]
+expression->== synch
+expression->; synch
+expression->IDENTIFIER ['IDENTIFIER', "expression'"]
+expression->!= synch
+expression->< synch
+expression->> synch
+params'->) ['@']
+params'->, [',', 'type', 'IDENTIFIER', "params'"]
+type->int ['int']
+type->char ['char']
+type->IDENTIFIER synch
+type->float ['float']
+type->double ['double']
+bool->) synch
+bool->( ['expression', 'relop', 'expression', 'act_relop_1']
+bool->IDENTIFIER ['expression', 'relop', 'expression', 'act_relop_1']
+bool->- ['expression', 'relop', 'expression', 'act_relop_1']
+bool->number ['expression', 'relop', 'expression', 'act_relop_1']
+procedures->int ['procedure', 'procedures']
+procedures->double ['procedure', 'procedures']
+procedures->float ['procedure', 'procedures']
+procedures->char ['procedure', 'procedures']
+procedures->while ['procedure', 'procedures']
+procedures->IDENTIFIER ['procedure', 'procedures']
+procedures->} ['@']
+procedures->if ['procedure', 'procedures']
+declare->int ['type', 'IDENTIFIER', 'act_1', 'Vars', ';', 'act_pop']
+declare->double ['type', 'IDENTIFIER', 'act_1', 'Vars', ';', 'act_pop']
+declare->float ['type', 'IDENTIFIER', 'act_1', 'Vars', ';', 'act_pop']
+declare->char ['type', 'IDENTIFIER', 'act_1', 'Vars', ';', 'act_pop']
+declare->while synch
+declare->IDENTIFIER synch
+declare->} synch
+declare->if synch
+procedure->int ['declare', 'act_pop_2']
+procedure->double ['declare', 'act_pop_2']
+procedure->float ['declare', 'act_pop_2']
+procedure->char ['declare', 'act_pop_2']
+procedure->while ['act_while_1', 'while', '(', 'bool', 'act_while_2', ')', '{', 'act_catch_label_t', 'procedure', 'act_while_3', '}', 'act_catch_label_f_n']
+procedure->IDENTIFIER ['assignment', 'act_pop']
+procedure->} synch
+procedure->if ['if', '(', 'bool', 'act_if_1', ')', '{', 'act_catch_label_t', 'procedure', 'act_jump_next', '}', 'proelse', 'act_catch_next']
+relop->>= ['>=', 'act_relop_2']
+relop->== ['==', 'act_relop_2']
+relop->( synch
+relop-><= ['<=', 'act_relop_2']
+relop->- synch
+relop->number synch
+relop->IDENTIFIER synch
+relop->!= ['!=', 'act_relop_2']
+relop->< ['<', 'act_relop_2']
+relop->> ['>', 'act_relop_2']

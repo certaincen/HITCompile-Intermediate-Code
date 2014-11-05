@@ -1,0 +1,47 @@
+program function functions
+functions function functions
+functions @
+function type IDENTIFIER ( params ) funcbody
+params @
+params type IDENTIFIER params'
+params' , type IDENTIFIER params'
+params' @
+funcbody ;
+funcbody { procedures }
+procedures procedure procedures
+procedures @
+procedure declare
+declare type IDENTIFIER Vars ;
+Vars , IDENTIFIER Vars
+Vars @
+procedure assignment
+assignment IDENTIFIER = expression ;
+expression number expression'
+expression IDENTIFIER expression'
+expression ( expression )
+expression - expression
+expression' + expression
+expression' * expression
+expression' - expression
+expression' / expression
+expression' @
+procedure if ( bool ) { procedure } proelse
+proelse else { procedure }
+proelse @
+procedure while ( bool ) { procedure }
+bool expression relop expression
+bool expression relop expression
+bool expression relop expression
+bool expression relop expression
+bool expression relop expression
+bool expression relop expression
+relop >
+relop <
+relop >=
+relop <=
+relop ==
+relop !=
+type int
+type char
+type float
+type double

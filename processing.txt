@@ -1,0 +1,178 @@
+top of the stack is program -> input_str is int ->new generation:int -> ['function', 'functions']
+top of the stack is function -> input_str is int ->new generation:int -> ['type', 'IDENTIFIER', '(', 'params', ')', 'funcbody']
+top of the stack is type -> input_str is int ->new generation:int -> ['int']
+top of the stack is int -> input_str is int ->operation is COMBINE
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is ( -> input_str is ( ->operation is COMBINE
+top of the stack is params -> input_str is ) ->new generation:) -> ['@']
+top of the stack is ) -> input_str is ) ->operation is COMBINE
+top of the stack is funcbody -> input_str is { ->new generation:{ -> ['{', 'procedures', '}']
+top of the stack is { -> input_str is { ->operation is COMBINE
+top of the stack is procedures -> input_str is int ->new generation:int -> ['procedure', 'procedures']
+top of the stack is procedure -> input_str is int ->new generation:int -> ['declare', 'act_pop_2']
+top of the stack is declare -> input_str is int ->new generation:int -> ['type', 'IDENTIFIER', 'act_1', 'Vars', ';', 'act_pop']
+top of the stack is type -> input_str is int ->new generation:int -> ['int']
+top of the stack is int -> input_str is int ->operation is COMBINE
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is Vars -> input_str is ; ->new generation:; -> ['@', 'act_pop']
+top of the stack is ; -> input_str is ; ->operation is COMBINE
+top of the stack is procedures -> input_str is char ->new generation:char -> ['procedure', 'procedures']
+top of the stack is procedure -> input_str is char ->new generation:char -> ['declare', 'act_pop_2']
+top of the stack is declare -> input_str is char ->new generation:char -> ['type', 'IDENTIFIER', 'act_1', 'Vars', ';', 'act_pop']
+top of the stack is type -> input_str is char ->new generation:char -> ['char']
+top of the stack is char -> input_str is char ->operation is COMBINE
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is Vars -> input_str is ; ->new generation:; -> ['@', 'act_pop']
+top of the stack is ; -> input_str is ; ->operation is COMBINE
+top of the stack is procedures -> input_str is int ->new generation:int -> ['procedure', 'procedures']
+top of the stack is procedure -> input_str is int ->new generation:int -> ['declare', 'act_pop_2']
+top of the stack is declare -> input_str is int ->new generation:int -> ['type', 'IDENTIFIER', 'act_1', 'Vars', ';', 'act_pop']
+top of the stack is type -> input_str is int ->new generation:int -> ['int']
+top of the stack is int -> input_str is int ->operation is COMBINE
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is Vars -> input_str is ; ->new generation:; -> ['@', 'act_pop']
+top of the stack is ; -> input_str is ; ->operation is COMBINE
+top of the stack is procedures -> input_str is IDENTIFIER ->new generation:a -> ['procedure', 'procedures']
+top of the stack is procedure -> input_str is IDENTIFIER ->new generation:a -> ['assignment', 'act_pop']
+top of the stack is assignment -> input_str is IDENTIFIER ->new generation:a -> ['IDENTIFIER', '=', 'expression', 'act_2', ';']
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is = -> input_str is = ->operation is COMBINE
+top of the stack is expression -> input_str is number ->new generation:1 -> ['number', "expression'"]
+top of the stack is number -> input_str is number ->operation is COMBINE
+top of the stack is expression' -> input_str is + ->new generation:+ -> ['+', 'expression', 'act_3']
+top of the stack is + -> input_str is + ->operation is COMBINE
+top of the stack is expression -> input_str is IDENTIFIER ->new generation:c -> ['IDENTIFIER', "expression'"]
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is expression' -> input_str is ; ->new generation:; -> ['@', 'act_4']
+top of the stack is ; -> input_str is ; ->operation is COMBINE
+top of the stack is procedures -> input_str is IDENTIFIER ->new generation:a -> ['procedure', 'procedures']
+top of the stack is procedure -> input_str is IDENTIFIER ->new generation:a -> ['assignment', 'act_pop']
+top of the stack is assignment -> input_str is IDENTIFIER ->new generation:a -> ['IDENTIFIER', '=', 'expression', 'act_2', ';']
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is = -> input_str is = ->operation is COMBINE
+top of the stack is expression -> input_str is IDENTIFIER ->new generation:c -> ['IDENTIFIER', "expression'"]
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is expression' -> input_str is + ->new generation:+ -> ['+', 'expression', 'act_3']
+top of the stack is + -> input_str is + ->operation is COMBINE
+top of the stack is expression -> input_str is number ->new generation:1 -> ['number', "expression'"]
+top of the stack is number -> input_str is number ->operation is COMBINE
+top of the stack is expression' -> input_str is ; ->new generation:; -> ['@', 'act_4']
+top of the stack is ; -> input_str is ; ->operation is COMBINE
+top of the stack is procedures -> input_str is if ->new generation:if -> ['procedure', 'procedures']
+top of the stack is procedure -> input_str is if ->new generation:if -> ['if', '(', 'bool', 'act_if_1', ')', '{', 'act_catch_label_t', 'procedure', 'act_jump_next', '}', 'proelse', 'act_catch_next']
+top of the stack is if -> input_str is if ->operation is COMBINE
+top of the stack is ( -> input_str is ( ->operation is COMBINE
+top of the stack is bool -> input_str is IDENTIFIER ->new generation:a -> ['expression', 'relop', 'expression', 'act_relop_1']
+top of the stack is expression -> input_str is IDENTIFIER ->new generation:a -> ['IDENTIFIER', "expression'"]
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is expression' -> input_str is > ->new generation:> -> ['@', 'act_4']
+top of the stack is relop -> input_str is > ->new generation:> -> ['>', 'act_relop_2']
+top of the stack is > -> input_str is > ->operation is COMBINE
+top of the stack is expression -> input_str is number ->new generation:2 -> ['number', "expression'"]
+top of the stack is number -> input_str is number ->operation is COMBINE
+top of the stack is expression' -> input_str is ) ->new generation:) -> ['@', 'act_4']
+top of the stack is ) -> input_str is ) ->operation is COMBINE
+top of the stack is { -> input_str is { ->operation is COMBINE
+top of the stack is procedure -> input_str is while ->new generation:while -> ['act_while_1', 'while', '(', 'bool', 'act_while_2', ')', '{', 'act_catch_label_t', 'procedure', 'act_while_3', '}', 'act_catch_label_f_n']
+top of the stack is while -> input_str is while ->operation is COMBINE
+top of the stack is ( -> input_str is ( ->operation is COMBINE
+top of the stack is bool -> input_str is IDENTIFIER ->new generation:a -> ['expression', 'relop', 'expression', 'act_relop_1']
+top of the stack is expression -> input_str is IDENTIFIER ->new generation:a -> ['IDENTIFIER', "expression'"]
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is expression' -> input_str is > ->new generation:> -> ['@', 'act_4']
+top of the stack is relop -> input_str is > ->new generation:> -> ['>', 'act_relop_2']
+top of the stack is > -> input_str is > ->operation is COMBINE
+top of the stack is expression -> input_str is number ->new generation:1 -> ['number', "expression'"]
+top of the stack is number -> input_str is number ->operation is COMBINE
+top of the stack is expression' -> input_str is ) ->new generation:) -> ['@', 'act_4']
+top of the stack is ) -> input_str is ) ->operation is COMBINE
+top of the stack is { -> input_str is { ->operation is COMBINE
+top of the stack is procedure -> input_str is IDENTIFIER ->new generation:a -> ['assignment', 'act_pop']
+top of the stack is assignment -> input_str is IDENTIFIER ->new generation:a -> ['IDENTIFIER', '=', 'expression', 'act_2', ';']
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is = -> input_str is = ->operation is COMBINE
+top of the stack is expression -> input_str is number ->new generation:4 -> ['number', "expression'"]
+top of the stack is number -> input_str is number ->operation is COMBINE
+top of the stack is expression' -> input_str is ; ->new generation:; -> ['@', 'act_4']
+top of the stack is ; -> input_str is ; ->operation is COMBINE
+top of the stack is } -> input_str is } ->operation is COMBINE
+top of the stack is } -> input_str is } ->operation is COMBINE
+top of the stack is proelse -> input_str is if ->new generation:if -> ['@', 'act_pop', 'act_catch_label_f']
+top of the stack is procedures -> input_str is if ->new generation:if -> ['procedure', 'procedures']
+top of the stack is procedure -> input_str is if ->new generation:if -> ['if', '(', 'bool', 'act_if_1', ')', '{', 'act_catch_label_t', 'procedure', 'act_jump_next', '}', 'proelse', 'act_catch_next']
+top of the stack is if -> input_str is if ->operation is COMBINE
+top of the stack is ( -> input_str is ( ->operation is COMBINE
+top of the stack is bool -> input_str is IDENTIFIER ->new generation:a -> ['expression', 'relop', 'expression', 'act_relop_1']
+top of the stack is expression -> input_str is IDENTIFIER ->new generation:a -> ['IDENTIFIER', "expression'"]
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is expression' -> input_str is > ->new generation:> -> ['@', 'act_4']
+top of the stack is relop -> input_str is > ->new generation:> -> ['>', 'act_relop_2']
+top of the stack is > -> input_str is > ->operation is COMBINE
+top of the stack is expression -> input_str is number ->new generation:1 -> ['number', "expression'"]
+top of the stack is number -> input_str is number ->operation is COMBINE
+top of the stack is expression' -> input_str is ) ->new generation:) -> ['@', 'act_4']
+top of the stack is ) -> input_str is ) ->operation is COMBINE
+top of the stack is { -> input_str is { ->operation is COMBINE
+top of the stack is procedure -> input_str is IDENTIFIER ->new generation:a -> ['assignment', 'act_pop']
+top of the stack is assignment -> input_str is IDENTIFIER ->new generation:a -> ['IDENTIFIER', '=', 'expression', 'act_2', ';']
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is = -> input_str is = ->operation is COMBINE
+top of the stack is expression -> input_str is number ->new generation:2 -> ['number', "expression'"]
+top of the stack is number -> input_str is number ->operation is COMBINE
+top of the stack is expression' -> input_str is ; ->new generation:; -> ['@', 'act_4']
+top of the stack is ; -> input_str is ; ->operation is COMBINE
+top of the stack is } -> input_str is } ->operation is COMBINE
+top of the stack is proelse -> input_str is else ->new generation:else -> ['else', '{', 'act_pop', 'act_catch_label_f', 'procedure', '}']
+top of the stack is else -> input_str is else ->operation is COMBINE
+top of the stack is { -> input_str is { ->operation is COMBINE
+top of the stack is procedure -> input_str is IDENTIFIER ->new generation:c -> ['assignment', 'act_pop']
+top of the stack is assignment -> input_str is IDENTIFIER ->new generation:c -> ['IDENTIFIER', '=', 'expression', 'act_2', ';']
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is = -> input_str is = ->operation is COMBINE
+top of the stack is expression -> input_str is number ->new generation:1 -> ['number', "expression'"]
+top of the stack is number -> input_str is number ->operation is COMBINE
+top of the stack is expression' -> input_str is ; ->new generation:; -> ['@', 'act_4']
+top of the stack is ; -> input_str is ; ->operation is COMBINE
+top of the stack is } -> input_str is } ->operation is COMBINE
+top of the stack is procedures -> input_str is while ->new generation:while -> ['procedure', 'procedures']
+top of the stack is procedure -> input_str is while ->new generation:while -> ['act_while_1', 'while', '(', 'bool', 'act_while_2', ')', '{', 'act_catch_label_t', 'procedure', 'act_while_3', '}', 'act_catch_label_f_n']
+top of the stack is while -> input_str is while ->operation is COMBINE
+top of the stack is ( -> input_str is ( ->operation is COMBINE
+top of the stack is bool -> input_str is IDENTIFIER ->new generation:a -> ['expression', 'relop', 'expression', 'act_relop_1']
+top of the stack is expression -> input_str is IDENTIFIER ->new generation:a -> ['IDENTIFIER', "expression'"]
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is expression' -> input_str is > ->new generation:> -> ['@', 'act_4']
+top of the stack is relop -> input_str is > ->new generation:> -> ['>', 'act_relop_2']
+top of the stack is > -> input_str is > ->operation is COMBINE
+top of the stack is expression -> input_str is number ->new generation:1 -> ['number', "expression'"]
+top of the stack is number -> input_str is number ->operation is COMBINE
+top of the stack is expression' -> input_str is ) ->new generation:) -> ['@', 'act_4']
+top of the stack is ) -> input_str is ) ->operation is COMBINE
+top of the stack is { -> input_str is { ->operation is COMBINE
+top of the stack is procedure -> input_str is if ->new generation:if -> ['if', '(', 'bool', 'act_if_1', ')', '{', 'act_catch_label_t', 'procedure', 'act_jump_next', '}', 'proelse', 'act_catch_next']
+top of the stack is if -> input_str is if ->operation is COMBINE
+top of the stack is ( -> input_str is ( ->operation is COMBINE
+top of the stack is bool -> input_str is IDENTIFIER ->new generation:a -> ['expression', 'relop', 'expression', 'act_relop_1']
+top of the stack is expression -> input_str is IDENTIFIER ->new generation:a -> ['IDENTIFIER', "expression'"]
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is expression' -> input_str is == ->new generation:== -> ['@', 'act_4']
+top of the stack is relop -> input_str is == ->new generation:== -> ['==', 'act_relop_2']
+top of the stack is == -> input_str is == ->operation is COMBINE
+top of the stack is expression -> input_str is number ->new generation:4 -> ['number', "expression'"]
+top of the stack is number -> input_str is number ->operation is COMBINE
+top of the stack is expression' -> input_str is ) ->new generation:) -> ['@', 'act_4']
+top of the stack is ) -> input_str is ) ->operation is COMBINE
+top of the stack is { -> input_str is { ->operation is COMBINE
+top of the stack is procedure -> input_str is IDENTIFIER ->new generation:a -> ['assignment', 'act_pop']
+top of the stack is assignment -> input_str is IDENTIFIER ->new generation:a -> ['IDENTIFIER', '=', 'expression', 'act_2', ';']
+top of the stack is IDENTIFIER -> input_str is IDENTIFIER ->operation is COMBINE
+top of the stack is = -> input_str is = ->operation is COMBINE
+top of the stack is expression -> input_str is number ->new generation:3 -> ['number', "expression'"]
+top of the stack is number -> input_str is number ->operation is COMBINE
+top of the stack is expression' -> input_str is ; ->new generation:; -> ['@', 'act_4']
+top of the stack is ; -> input_str is ; ->operation is COMBINE
+top of the stack is } -> input_str is } ->operation is COMBINE
+top of the stack is proelse -> input_str is } ->new generation:} -> ['@', 'act_pop', 'act_catch_label_f']
+top of the stack is } -> input_str is } ->operation is COMBINE
+top of the stack is procedures -> input_str is } ->new generation:} -> ['@']
+top of the stack is } -> input_str is } ->operation is COMBINE

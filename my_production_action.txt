@@ -1,0 +1,47 @@
+program function functions
+functions function functions
+functions @
+function type IDENTIFIER ( params ) funcbody
+params @
+params type IDENTIFIER params'
+params' , type IDENTIFIER params'
+params' @
+funcbody ;
+funcbody { procedures }
+procedures procedure procedures
+procedures @
+procedure declare act_pop_2
+declare type IDENTIFIER act_1 Vars ; act_pop
+Vars , IDENTIFIER act_1 act_pop Vars
+Vars @ act_pop
+procedure assignment act_pop
+assignment IDENTIFIER = expression act_2 ;
+expression number expression'
+expression IDENTIFIER expression'
+expression ( expression ) act_6
+expression - expression act_5
+expression' + expression act_3
+expression' * expression act_3
+expression' - expression act_3
+expression' / expression act_3
+expression' @ act_4
+procedure if ( bool act_if_1 ) { act_catch_label_t procedure act_jump_next } proelse act_catch_next 
+proelse else { act_pop act_catch_label_f procedure }
+proelse @ act_pop act_catch_label_f
+procedure act_while_1 while ( bool act_while_2 ) { act_catch_label_t procedure act_while_3 } act_catch_label_f_n
+bool expression relop expression act_relop_1
+bool expression relop expression act_relop_1
+bool expression relop expression act_relop_1
+bool expression relop expression act_relop_1
+bool expression relop expression act_relop_1
+bool expression relop expression act_relop_1
+relop > act_relop_2
+relop < act_relop_2
+relop >= act_relop_2
+relop <= act_relop_2
+relop == act_relop_2
+relop != act_relop_2
+type int
+type char
+type float
+type double
